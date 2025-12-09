@@ -57,7 +57,7 @@ WS2812_Status_t WS2812_SetPixel(WS2812_Handle_t handle, uint16_t index,
     if (handle == NULL || index >= handle->led_num)
         return WS2812_ERR;
 
-    memset(handle->buffer,0,sizeof(WS2812_RGB_t) * handle->led_num);
+    // memset(handle->buffer,0,sizeof(WS2812_RGB_t) * handle->led_num);
     handle->buffer[index].bits.r = r;
     handle->buffer[index].bits.g = g;
     handle->buffer[index].bits.b = b;
